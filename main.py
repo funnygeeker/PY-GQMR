@@ -123,16 +123,14 @@ def Message_Processing():  # 消息处理
                                     if TEMP0 in rev["message"]:  # 如果检测到了脏话
                                         bad_record = 1  # 加入脏话消息记录
                                         # 执行相关（未完工）
-                                        print('【注意】群聊：'+str(datetime.fromtimestamp(int(rev['time']))), str(rev['group_id']), '中，用户：'+str(
-                                            rev['group_id']), '发送了脏话：'+str(rev['message'][:100])+'（只显示前100字）')
+                                        print('【注意】'+str(datetime.fromtimestamp(int(rev['time']))),'群聊:', str(rev['group_id']), '中，用户：'+str(rev['group_id']), '发送了脏话：'+str(rev['message'][:100])+'（只显示前100字）')
                                         break
                             if ads_word != []:  # 如果启用了广告检查
                                 for TEMP0 in ads_word:  # 逐一匹配广告词库
                                     if TEMP0 in rev["message"]:  # 如果检测到了广告
                                         ads_record = 1  # 加入广告消息记录
                                         # 执行相关（未完工）
-                                        print('【注意】群聊：'+str(datetime.fromtimestamp(int(rev['time']))), str(rev['group_id']), '中，用户：'+str(
-                                            rev['group_id']), '发送了广告：'+str(rev['message'][:100])+'（只显示前100字）')
+                                        print('【注意】'+str(datetime.fromtimestamp(int(rev['time']))),'群聊:', str(rev['group_id']), '中，用户：'+str(rev['group_id']), '发送了广告：'+str(rev['message'][:100])+'（只显示前100字）')
                                         break
                         else:
                             # 对方身份为群聊管理员或群主，请自定义
@@ -144,13 +142,11 @@ def Message_Processing():  # 消息处理
                         for TEMP0 in admin_user_id:  # 逐一匹配发言的用户是否为机器人管理员
                             if TEMP0 == str(rev["user_id"]):  # 如果是机器人管理员
                                 # 执行相关命令（管理员指令）
-                                print(str(datetime.fromtimestamp(
-                                    int(rev['time'])))+'【提示】：当前暂不支持机器人指令[群聊]（管理员）')
+                                print('【提示】'+str(datetime.fromtimestamp(int(rev['time'])))+'当前暂不支持机器人指令[群聊]（管理员）')
                                 break
                     else:
                         # 执行相关命令（普通指令）
-                        print(str(datetime.fromtimestamp(
-                            int(rev['time'])))+'【提示】：当前暂不支持机器人指令[群聊]（普通用户）')
+                        print('【提示】'+str(datetime.fromtimestamp(int(rev['time'])))+'当前暂不支持机器人指令[群聊]（普通用户）')
                         pass
 
                 # 群聊消息结算
@@ -248,13 +244,11 @@ def Message_Processing():  # 消息处理
                     for TEMP0 in admin_user_id:  # 逐一匹配发言的用户是否为机器人管理员
                         if TEMP0 == str(rev["user_id"]):  # 如果是机器人管理员
                             # 执行相关命令（管理员指令）
-                            print(str(datetime.fromtimestamp(
-                                int(rev['time'])))+'【提示】：当前暂不支持机器人指令[私聊]（管理员）')
+                            print('【提示】'+str(datetime.fromtimestamp(int(rev['time']))),'当前暂不支持机器人指令[私聊]（管理员）')
                             break
                 else:
                     # 执行相关命令（普通指令）
-                    print(str(datetime.fromtimestamp(
-                        int(rev['time'])))+'【提示】：当前暂不支持机器人指令[私聊]（普通用户）')
+                    print('【提示】'+str(datetime.fromtimestamp(int(rev['time']))),'当前暂不支持机器人指令[私聊]（普通用户）')
                     pass
 
 

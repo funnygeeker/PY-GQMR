@@ -40,7 +40,7 @@ def del_msg(msg_id):  # 撤回消息【消息ID】
     payload = "GET /delete_msg?message_id=" + str(msg_id) + " HTTP/1.1\r\nHost:" + str(
         server_ip) + ":" + str(server_send_port) + "\r\nConnection: close\r\n\r\n"
     server_client.send(payload.encode("utf-8"))
-    print("【撤回】：" + str(msg_id))
+    print("【撤回】" + str(msg_id))
     server_client.close()
     return 0
 
