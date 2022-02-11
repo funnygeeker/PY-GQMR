@@ -1,0 +1,3 @@
+Q群协管机器人的配置文件都在这了，使用前记得将里面的配置文件逐个阅读并设置！
+作者：稽术宅（B站）funnygeeker（Github）funnygeeker（Gitee）
+2022年官网：极客街社群（geekjie.com）
