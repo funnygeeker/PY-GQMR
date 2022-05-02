@@ -1,3 +1,6 @@
+## 项目更名说明
+此**项目已更名为qgma(QQ Group Management Assistant)**，此仓库将**不再更新**，项目**迁移**至https://github.com/funnygeeker/qgma
+感谢你的支持！
 ## 欢迎使用"极客街社群-QQ群协助管理机器人（py-gqmr）"
 - PYTHON GEEKJIE QQ-GROUP MANAGER
 ![界面](https://user-images.githubusercontent.com/96659329/153587008-d7995e2f-2d62-451d-9069-f77d873504e9.PNG)
